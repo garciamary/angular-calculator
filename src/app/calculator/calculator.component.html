@@ -1,0 +1,22 @@
+
+<div class="card-calcu">
+  <div class="header">
+    <h3>CALCULATOR</h3>
+    <div class="form-control">
+      <input type="number" class="firstNumber" [(ngModel)]="firstNumber">
+      <input type="number" class="secondNumber" [(ngModel)]="secondNumber">
+      <app-child
+      [firstNumber]="firstNumber"
+      [secondNumber]="secondNumber"
+      (outFunction)="outFunctionParent1($event)"
+
+      ></app-child>
+
+    </div>
+    </div>
+
+    <div class="footer">
+      <h2>= {{result}}</h2>
+    </div>
+  </div>
+
